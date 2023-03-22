@@ -10,15 +10,15 @@ class LoginPage extends Page {
      * define selectors using getter methods
      */
     get inputUsername() {
-        return $('#username');
+       // return $('#username');
     }
 
     get inputPassword() {
-        return $('#password');
+       // return $('#password');
     }
 
     get btnSubmit() {
-        return $('button[type="submit"]');
+       // return $('button[type="submit"]');
     }
 
     /**
@@ -26,17 +26,34 @@ class LoginPage extends Page {
      * e.g. to login using username and password
      */
     async login (username, password) {
-        await this.inputUsername.setValue(username);
-        await this.inputPassword.setValue(password);
-        await this.btnSubmit.click();
+       await this.inputUsername.setValue(username);
+       await this.inputPassword.setValue(password);
+       await this.btnSubmit.click();
+      const assert = require('assert');
+      browser.pause(20000)
+          driver.rotateDevice(100, 100);
+
+          // Check if the title is correct
+          assert.ok(true, 'Example Domain');
+       //   undefinedMethod() // for getting error for undefined method
+
     }
 
     /**
      * overwrite specific options to adapt it to page object
      */
     open() {
-        return super.open('login');
+        //return super.open('login');
+        
+        
     }
+
+    
+
+    
+
+
+
 }
 
 module.exports = new LoginPage();

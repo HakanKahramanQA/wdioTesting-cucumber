@@ -11,7 +11,7 @@
     * checkout the repository
     * Check that packages are available
     ```
-    $ cd wdio-cucumber
+    $ cd wdioTesting-cucumber
     ```
     **LambdaTest Authentication Credentials:** Make sure you have your LambdaTest credentials with you to run test automation scripts with Jest on LambdaTest Selenium Grid. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/) or through [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile).
 
@@ -29,7 +29,7 @@ set LT_ACCESS_KEY="YOUR ACCESS KEY"`
 
 ```
 To run single test on Lambdatest
-    $ npm run single
+    $ npx wdio run ./wdio.confsingle.js
     
 To run On-Prem ChromeDriver
     $ npm run onprem    

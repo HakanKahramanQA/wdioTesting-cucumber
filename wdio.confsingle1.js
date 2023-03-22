@@ -11,25 +11,11 @@ exports.config = {
        // platform: 'WIN10',
         build: 'WDIO-Cucumber-Build',
         name: 'Login-feature',
-        platformName: 'ios',
+        platformName: 'android',
         isRealMobile: true,
         deviceName: '.*',
-        tunnel: false,
-        tunnemName: "b553e4fd-70ba-4de2-85db-bef7de73020a",
-        app: 'iOSSampleApp'
-      }
-    //   {
-    //     //  browserName: 'chrome',
-    //      // version: 'latest',
-    //      // platform: 'WIN10',
-    //       build: 'WDIO-Cucumber-Build',
-    //       name: 'Login-feature',
-    //       platformName: 'android',
-    //       isRealMobile: true,
-    //       deviceName: '.*',
-    //       app: 'AndroidSampleApp'
-    //     }    
-    ],
+        app: 'AndroidSampleApp'
+      }],
     services: [
             ['lambdatest', {
                 tunnel: false
@@ -47,7 +33,7 @@ exports.config = {
         './features/**/*.feature'
     ],
     reporters: ['spec'],
-    product:"appAutomation",
+    
     framework: 'cucumber',
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
