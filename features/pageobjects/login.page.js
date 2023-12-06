@@ -30,7 +30,7 @@ class LoginPage extends Page {
        await this.inputPassword.setValue(password);
        await this.btnSubmit.click();
       const assert = require('assert');
-      browser.pause(20000)
+      browser.pause(200000)
           driver.rotateDevice(100, 100);
 
           // Check if the title is correct

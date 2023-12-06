@@ -1,6 +1,6 @@
 exports.config = {
-    user: process.env.LT_USERNAME || 'LT_USERNAME',
-    key: process.env.LT_ACCESS_KEY || 'LT_ACCESS_KEY',
+    user: process.env.LT_USERNAME || 'mobileQA',
+    key: process.env.LT_ACCESS_KEY || 'bS1U63NB0xhfHhmhxmUI2eYO2UIEwvyeCmwz4YnEqZBx9CH3J3',
   
     updateJob: false,
     exclude: [],
@@ -14,9 +14,12 @@ exports.config = {
         platformName: 'ios',
         isRealMobile: true,
         deviceName: '.*',
-        tunnel: false,
-        tunnemName: "b553e4fd-70ba-4de2-85db-bef7de73020a",
-        app: 'iOSSampleApp'
+        visual: true,
+        network:true,
+        tunnel: true,
+        devicelog: true,
+        tunnelName: "test1",
+        app: 'lt://APP10160241051701868548376149'
       }
     //   {
     //     //  browserName: 'chrome',
@@ -31,8 +34,12 @@ exports.config = {
     //     }    
     ],
     services: [
-            ['lambdatest', {
-                tunnel: false
+            ['lambdatest', {       
+                tunnel: true,
+                lambdatestOpts: {
+                          logFile: "tunnel.log",
+                          tunnelName: "test1",
+                        },             
             }]
         ],
    
